@@ -4,14 +4,11 @@ import { program } from "commander";
 import fs from "fs";
 // import path from "path";
 import { execSync } from "child_process";
+import packageJson from "../package.json";
 
 // Version & Program description
 program
-  .version(
-    process.env.npm_package_version ?? `unknown`,
-    "-v",
-    "Output the version number",
-  )
+  .version(packageJson.version ?? `unknown`, "-v", "Output the version number")
   .description("Creates, updates, and deploys Mobot projects");
 
 // Sync the current project to GitHub
