@@ -19,12 +19,13 @@ program
   .description(`Upgrades tke cli to the latest version`)
   .action(async function () {
     console.log(`Updating Mobot CLI...`);
-    const tag = fs.existsSync(localSettingsPath)
-      ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
-      : `latest`;
+    console.log(path.resolve(__dirname, `../package.json`));
     const oldVersion = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
     ).version;
+    const tag = fs.existsSync(localSettingsPath)
+      ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
+      : `latest`;
     execSync(`npm i -g mobot-cli@${tag}`);
     const newVersion = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
