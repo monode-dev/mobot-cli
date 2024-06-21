@@ -25,10 +25,10 @@ program
     execSync(`npm i -g mobot-cli@${tag}`);
     // Get new version number
     const oldVersion = JSON.parse(
-      fs.readFileSync(path.relative(__dirname, `./package.json`), `utf-8`),
+      fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
     ).version;
     const newVersion = JSON.parse(
-      fs.readFileSync(path.relative(__dirname, `./package.json`), `utf-8`),
+      fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
     ).version;
     if (oldVersion === newVersion) {
       console.log(`Mobot CLI is already up to date`);
