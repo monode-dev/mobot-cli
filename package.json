@@ -1,0 +1,20 @@
+{
+  "name": "mobot-cli",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/mobot.js",
+  "scripts": {
+    "pub": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "semver": "^7.6.2"
+  },
+  "dependencies": {
+    "puppeteer": "^22.11.2",
+    "vite": "^5.3.1"
+  }
+}
