@@ -11,6 +11,14 @@ program
   .version(packageJson.version, "-v", "Output the version number")
   .description("Creates, updates, and deploys Mobot projects");
 
+// Sync
+program
+  .command(`sync`)
+  .description(`Syncs the current project to the .mobot_cache directory`)
+  .action(async function () {
+    console.log(`"sync" is not yet implemented`);
+  });
+
 // Sync the current project to GitHub
 const localSettingsPath = `${__dirname}/localSettings.json`;
 program
