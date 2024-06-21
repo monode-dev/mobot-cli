@@ -22,11 +22,10 @@ program
     const tag = fs.existsSync(localSettingsPath)
       ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
       : `latest`;
-    execSync(`npm i -g mobot-cli@${tag}`);
-    // Get new version number
     const oldVersion = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
     ).version;
+    execSync(`npm i -g mobot-cli@${tag}`);
     const newVersion = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
     ).version;
