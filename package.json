@@ -1,8 +1,8 @@
 {
   "name": "mobot-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "dist/mobot.js",
+  "main": "dist/mobot-cli.js",
   "scripts": {
     "build": "tsc",
     "pub": "sucrase-node pub.ts",
@@ -24,9 +24,9 @@
     "vite": "^5.3.1"
   },
   "bin": {
-    "mobot": "dist/mobot.js",
-    "mbt": "dist/mobot.js",
-    "mob": "dist/mobot.js"
+    "mobot": "dist/mobot-cli.js",
+    "mbt": "dist/mobot-cli.js",
+    "mob": "dist/mobot-cli.js"
   },
   "directories": {
     "src": "src"
