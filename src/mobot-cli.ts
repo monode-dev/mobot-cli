@@ -5,11 +5,16 @@ import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 
+// Path
+const cliPath = path.relative(__dirname, `../`);
+
 // Version & Program description
-const packageJsonPath = path.join(__dirname, "package.json");
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 program
-  .version(packageJson.version, "-v", "Output the version number")
+  .version(
+    process.env.npm_package_version ?? `unknown`,
+    "-v",
+    "Output the version number",
+  )
   .description("Creates, updates, and deploys Mobot projects");
 
 // Sync the current project to GitHub
