@@ -19,7 +19,6 @@ program
   .description(`Upgrades tke cli to the latest version`)
   .action(async function () {
     console.log(`Updating Mobot CLI...`);
-    console.log(path.resolve(__dirname, `../package.json`));
     const oldVersion = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, `../package.json`), `utf-8`),
     ).version;
