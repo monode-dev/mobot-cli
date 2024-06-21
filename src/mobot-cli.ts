@@ -26,6 +26,8 @@ program
       ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
       : `latest`;
     execSync(`npm i -g mobot-cli@${tag}`);
+    // Log new version number
+    console.log(`Successfully updated to Mobot CLI v${process.env.npm_package_version}`);
   });
 
 // Run this program
