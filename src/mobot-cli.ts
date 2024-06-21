@@ -8,7 +8,7 @@ import packageJson from "../package.json";
 
 // Version & Program description
 program
-  .version(packageJson.version ?? `unknown`, "-v", "Output the version number")
+  .version(packageJson.version ?? `unknowns`, "-v", "Output the version number")
   .description("Creates, updates, and deploys Mobot projects");
 
 // Sync the current project to GitHub
