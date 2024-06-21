@@ -8,7 +8,7 @@ import packageJson from "../package.json";
 
 // Version & Program description
 program
-  .version(packageJson.version ?? `unknowns`, "-v", "Output the version number")
+  .version(packageJson.version, "-v", "Output the version number")
   .description("Creates, updates, and deploys Mobot projects");
 
 // Sync the current project to GitHub
@@ -23,10 +23,7 @@ program
       ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
       : `latest`;
     execSync(`npm i -g mobot-cli@${tag}`);
-    // Log new version number
-    console.log(
-      `Successfully updated to Mobot CLI v${process.env.npm_package_version}`,
-    );
+    execSync(`mobot -v`);
   });
 
 // Run this program
