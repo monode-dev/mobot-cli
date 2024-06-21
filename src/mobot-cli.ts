@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+// Commander Reference: https://www.npmjs.com/package/commander#common-option-types-boolean-and-value
 import { program } from "commander";
 import fs from "fs";
 import path from "path";
