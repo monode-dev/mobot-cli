@@ -2,7 +2,7 @@
 // Commander Reference: https://www.npmjs.com/package/commander#common-option-types-boolean-and-value
 import { program } from "commander";
 import fs from "fs";
-// import path from "path";
+import path from "path";
 import { execSync } from "child_process";
 import packageJson from "../package.json";
 
@@ -23,7 +23,18 @@ program
       ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
       : `latest`;
     execSync(`npm i -g mobot-cli@${tag}`);
-    execSync(`mobot -v`);
+    // Get new version number
+    const oldVersion = JSON.parse(
+      fs.readFileSync(path.relative(__dirname, `../package.json`), `utf-8`),
+    ).version;
+    const newVersion = JSON.parse(
+      fs.readFileSync(path.relative(__dirname, `../package.json`), `utf-8`),
+    ).version;
+    if (oldVersion === newVersion) {
+      console.log(`Mobot CLI is already up to date`);
+    } else {
+      console.log(`Updated Mobot CLI to ${newVersion}`);
+    }
   });
 
 // Run this program
