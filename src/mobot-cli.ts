@@ -20,14 +20,16 @@ program
   .command(`upgrade`)
   .aliases([`update`, `up`, `u`])
   .description(`Upgrades tke cli to the latest version`)
-  .action(async function (message, options) {
+  .action(async function () {
     console.log(`Updating Mobot CLI...`);
     const tag = fs.existsSync(localSettingsPath)
       ? JSON.parse(fs.readFileSync(localSettingsPath, `utf-8`)).tag
       : `latest`;
     execSync(`npm i -g mobot-cli@${tag}`);
     // Log new version number
-    console.log(`Successfully updated to Mobot CLI v${process.env.npm_package_version}`);
+    console.log(
+      `Successfully updated to Mobot CLI v${process.env.npm_package_version}`,
+    );
   });
 
 // Run this program
