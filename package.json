@@ -1,6 +1,6 @@
 {
   "name": "mobot-cli",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "",
   "main": "dist/src/mobot-cli.js",
   "scripts": {
