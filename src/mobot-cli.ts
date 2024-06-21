@@ -2,11 +2,8 @@
 // Commander Reference: https://www.npmjs.com/package/commander#common-option-types-boolean-and-value
 import { program } from "commander";
 import fs from "fs";
-import path from "path";
+// import path from "path";
 import { execSync } from "child_process";
-
-// Path
-const cliPath = path.relative(__dirname, `../`);
 
 // Version & Program description
 program
