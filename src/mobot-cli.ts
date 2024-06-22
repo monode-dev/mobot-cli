@@ -37,6 +37,7 @@ program
     // For example, deploy infrastructure, validate configuration, etc.
 
     await browser.close();
+    process.exit(0);
   });
 
 // Sync the current project to GitHub
