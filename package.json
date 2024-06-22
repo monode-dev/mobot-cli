@@ -1,6 +1,6 @@
 {
   "name": "mobot-cli",
-  "version": "0.0.28",
+  "version": "0.0.30",
   "description": "",
   "main": "dist/src/mobot-cli.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/rollup": "^0.54.0",
     "esbuild": "^0.21.5",
     "semver": "^7.6.2",
     "sucrase": "^3.35.0",
