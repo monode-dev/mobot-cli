@@ -1,6 +1,6 @@
 {
   "name": "mobot-cli",
-  "version": "0.0.24",
+  "version": "0.0.27",
   "description": "",
   "main": "dist/src/mobot-cli.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "dependencies": {
     "commander": "^12.1.0",
     "puppeteer": "^22.11.2",
-    "vite": "^5.3.1"
+    "vite": "5.2.12"
   },
   "bin": {
     "mobot": "dist/src/mobot-cli.js",

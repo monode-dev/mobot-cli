@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "nodenext",
-    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["vite/client", "node"],
+    "lib": ["ESNext", "DOM"],
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
