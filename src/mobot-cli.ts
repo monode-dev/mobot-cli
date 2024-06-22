@@ -4,7 +4,7 @@ import { program } from "commander";
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
-import packageJson from "../package.json" with { type: "json" };
+import packageJson from "../package.json";
 import { createServer } from "vite";
 import puppeteer from "puppeteer";
 
